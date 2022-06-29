@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introdução às Ciência Sociais Computacionais</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Tiago Ventura" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+    <link rel="stylesheet" href="mytheme-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Introdução às Ciência Sociais Computacionais
+]
+.author[
+### Tiago Ventura
+]
+.institute[
+### New York University
+]
+
+---
+
+
+
+
+
+
+name: about-me
+layout: false
+class: about-me-slide, inverse, middle, center
+
+## .red[Quem sou?]
+
+&lt;img style="border-radius: 40%;" src="./tiago.jpg" width="150px"/&gt;
+
+### Tiago Ventura
+
+#### Postdoc Center for Social Medial and Politics, NYU
+
+#### Professor Assistente Georgetown University
+
+.fade[PhD, University of Maryland, College Park]
+
+[&lt;svg role="img" viewBox="0 0 24 24" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;title&gt;&lt;/title&gt;  &lt;path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"&gt;&lt;/path&gt;&lt;/svg&gt; @TiagoVentura_](https://twitter.com/_Tiagoventura)
+[&lt;svg role="img" viewBox="0 0 24 24" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;title&gt;&lt;/title&gt;  &lt;path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"&gt;&lt;/path&gt;&lt;/svg&gt; TiagoVentura](https://github.com/TiagoVentura)
+[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;title&gt;&lt;/title&gt;  &lt;path d="M424,80H88a56.06,56.06,0,0,0-56,56V376a56.06,56.06,0,0,0,56,56H424a56.06,56.06,0,0,0,56-56V136A56.06,56.06,0,0,0,424,80Zm-14.18,92.63-144,112a16,16,0,0,1-19.64,0l-144-112a16,16,0,1,1,19.64-25.26L256,251.73,390.18,147.37a16,16,0,0,1,19.64,25.26Z"&gt;&lt;/path&gt;&lt;/svg&gt; venturat@umd.edu](venturat@umd.edu)
+[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;title&gt;&lt;/title&gt;  &lt;path d="M208,352H144a96,96,0,0,1,0-192h64" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:36px"&gt;&lt;/path&gt;  &lt;path d="M304,160h64a96,96,0,0,1,0,192H304" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:36px"&gt;&lt;/path&gt;  &lt;line x1="163.29" y1="256" x2="350.71" y2="256" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:36px"&gt;&lt;/line&gt;&lt;/svg&gt;https://tiagoventura.rbind.io/](https://tiagoventura.rbind.io/)
+
+---
+
+class: middle
+
+# Planos para hoje.
+
+--
+
+Apresentar uma visão geral sobre o campo das ciências sociais computacionais
+
+--
+
+- .blue[Estudos em CSS]
+
+- .blue[Definições sobre CSS]
+
+- .blue[Caracteristicas de estudos em CSS]
+
+--
+---
+class: middle
+
+# Planos para hoje.
+
+#### **.red[Porque vocês devem investir na formação ciências sociais computacionais]**
+
+---
+class: center, middle
+
+# Porque estamos e como chegamos aqui?
+
+--
+
+### Dados, Dados, Dados, Dados...
+
+--
+---
+
+class: center, middle
+
+&lt;img src="figs/data_store.png" width="80%" /&gt;
+
+---
+
+# Mobilidade Digital
+
+&lt;img src="figs/mob_01.png" width="80%" /&gt;
+
+---
+
+# Redes Sociais
+
+&lt;img src="figs/redes.png" width="70%" /&gt;
+
+---
+
+## Dados Eleitorais
+
+&lt;img src="figs/eleicoes.png" width="70%" /&gt;
+
+---
+
+## Text-as-Data
+
+.pull-left[
+&lt;img src="figs/camara.png" width="70%" /&gt;
+]
+
+.pull-right[
+&lt;img src="figs/tweets.png" width="70%" /&gt;
+]
+
+---
+
+## Surveys On-line
+
+&lt;img src="figs/survey.png" width="70%" /&gt;
+
+---
+## Super Computadores
+
+
+&lt;img src="figs/collab.png" width="70%" /&gt;
+
+---
+
+
+class: center,middle
+
+## `Mas, afinal, o que é CSS?`
+
+--
+
+&lt;img src="figs/waiting.gif" width="70%" /&gt;
+
+---
+class: middle, center
+
+
+### We define CSS as the development and application of computational methods to complex, typically large-scale, human (sometimes simulated) behavioral data
+
+.footnote[[Em Lazer et al 2020](https://www.science.org/doi/abs/10.1126/science.aaz8170)]
+
+
+---
+class: inverse, middle, center
+
+## Aprendendo sobre CSS com alguns exemplos. 
+
+
+---
+
+# Bots no Twitter
+
+&lt;img src="figs/bail.png" width="90%" /&gt;
+
+.footnote[[Bail et al 2018](https://www.pnas.org/doi/10.1073/pnas.1804840115)]
+---
+### Resumo
+
+&lt;img src="figs/bail_design.jpg" width="90%" /&gt;
+
+
+---
+
+## Experimento com chats no Facebook
+
+
+.panelset[
+.panel[
+.panel-name[Artigos]
+.pull-left[
+&lt;img src="./figs/joc.png" width="917" /&gt;
+]
+
+.pull-right[
+&lt;img src="./figs/jqd.png" width="681" /&gt;
+]
+]
+
+.panel[.panel-name[Chats]
+
+.pull-left[
+
+**Video Feed + Social Chat: All in one screen.**
+
+Popular among the younger generations.
+
+- Twitch (Amazon)
+- YouTube/YouTube Gaming (Google)
+- Mixer (Microsoft)
+- Facebook Lives
+]
+.pull-right[
+&lt;img src="./figs/genelectionabc.png" width="80%" /&gt;
+]
+]
+
+.panel[.panel-name[Field Experiment]
+
+We conducted a large scale ''field" experiment that assigns would-be debate viewers to watch on different platforms the October 2019 Democratic Debate.
+
+Two-Wave On-line Survey in September 2019 through MTurk (following Gross, Porter and Wood, 2019). 
+
+**Three main experimental conditions**
+
+- Control (standard NBC broadcast)
+- Expert chat (538 website)
+- Streaming chat (Facebook)
+
+We then surveyed the respondents after the debate and measured the effects of streaming chats. 
+]
+
+.panel[.panel-name[Observational Setup]
+
+#### Text Analysis
+
+To complement our analysis, we built automatic scrapper (Selenium) to collect comments on facebook pages
+
+- One Hundred Thousand Comments  from Facebook pages.
+
+- Several Expert Chats
+
+- Performed Dictionary Methods Sentiment Analysis. 
+
+- Deep Learning Models to identify toxicity. 
+
+
+]
+]
+
+---
+
+## Ideologia com Dados de Twitter
+
+
+&lt;img src="figs/folha.png" width="80%" /&gt;
+
+.footnote[Inspirado em [Barbera et al.](https://www.cambridge.org/core/journals/political-analysis/article/birds-of-the-same-feather-tweet-together-bayesian-ideal-point-estimation-using-twitter-data/91E37205F69AEA32EF27F12563DC2A0A)]
+
+---
+## Mobilidade com dados de celulares e pandemia
+
+
+&lt;img src="figs/diff.png" width="70%" /&gt;
+
+
+.footnote[[More than Words](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3582908)]
+
+---
+
+class:center
+
+&lt;img src="figs/css_gesis.png" width="80%" /&gt;
+
+.footnote[source: [Katrine Weler Gesis](https://www.youtube.com/watch?v=R-iqC_3cS80)]
+
+---
+class:middle, center
+### Ciência Social Computacional = Ciência Social + Ciência de Dados.
+
+---
+
+### Ciência Social
+
+- Entender Compartamento Social.
+
+- Big Questions.
+
+- Dilemas do Comportamento Humano.
+
+- Explicar Mudanças e Padrões na Sociedade.
+
+- Em geral, manipulação de banco de dados pequenos ou médios. 
+
+
+---
+
+### Ciências de Dados
+
+- Estuda qualquer assunto.
+
+- Aprende diretamente dos Dados - Modelos Estatísticos e ML.
+
+- Big Data.
+
+- Predição de mudanças e comportamentos.
+
+
+---
+
+class: center,middle
+
+
+### Ciência de Dados não é suficiente sozinha se quisermos responder perguntas teóricamente orientadas
+
+---
+class: center,middle
+
+### Cientistas Sociais isoladamente não possuem o conhecimento técnico para usar as novas bases de dados e métodos da era digital. 
+
+
+---
+class:middle, center
+### Ciência Social Computacional = Ciência Social + Ciência de Dados.
+
+---
+
+class: inverse, center, middle
+
+### Caracteristicas de Estudos em CSS
+
+---
+class:center, middle
+
+
+### Readymade + Custommade data
+
+--
+
+### Equipes e pesquisas interdisciplinares
+
+--
+
+### Questões éticas se tornam mais relevantes
+
+---
+class: center, middle
+## CSS: Desafios.
+
+--
+
+#### .blue[Big Data requer mais treinamento técnico]
+
+--
+
+#### .blue[Pouca oferta de cursos e treinamento]
+
+--
+
+#### .blue[Campo em emergência: universidades não possuem estrutura institucional]
+
+--
+
+#### .blue[Construir mais interdiciplinariedade e combinar técnica e teoria]
+
+--
+
+
+---
+class: center, middle
+## Porque jovens como voces devem investir em CSS?
+
+--
+
+#### .blue[Melhores oportunidades e mais opções no mercado de trabalho]
+
+--
+
+
+#### .blue[Produzir conhecimento na fronteira]
+
+--
+
+#### .blue[Produzir pesquisa com impacto social e responder dilemas da nossa sociedade digital]
+
+--
+
+#### .red[Trazer novas respostas a problemas antigos]
+
+--
+
+---
+class: middle, center
+
+## Onde posso aprender tudo isto? 
+
+--
+### **[Summer Institutes in Computational Social Sciences](https://sicss.io/)**
+--
+
+---
+class: center, middle, inverse
+
+### Obrigado!
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
